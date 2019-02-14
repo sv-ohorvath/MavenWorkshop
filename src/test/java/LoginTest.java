@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
 
-    WebDriver driver = Drivers(driver);
+    public static Drivers driver = new Drivers();
 
     @BeforeClass
     public static void setUp() throws InterruptedException {
