@@ -1,3 +1,4 @@
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -5,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
 
-    Drivers driver = new Drivers(ChromeDriver driver){};
+    WebDriver driver = Drivers(driver);
 
     @BeforeClass
     public static void setUp() throws InterruptedException {
