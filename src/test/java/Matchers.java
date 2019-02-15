@@ -5,67 +5,14 @@ import java.util.List;
 import java.util.Set;
 
 public class Matchers {
-    public static WebDriver driver = new WebDriver() {
-        public void get(String s) {
 
-        }
+    public static By emailForm = By.id("email");
 
-        public String getCurrentUrl() {
-            return null;
-        }
+    public static By passwordForm = By.cssSelector("#passwd");
 
-        public String getTitle() {
-            return null;
-        }
+    public static By signInButton = By.cssSelector("#SubmitLogin");
 
-        public List<WebElement> findElements(By by) {
-            return null;
-        }
+    public static By signInError = By.cssSelector("#alert.alert-danger ol li");
 
-        public WebElement findElement(By by) {
-            return null;
-        }
-
-        public String getPageSource() {
-            return null;
-        }
-
-        public void close() {
-
-        }
-
-        public void quit() {
-
-        }
-
-        public Set<String> getWindowHandles() {
-            return null;
-        }
-
-        public String getWindowHandle() {
-            return null;
-        }
-
-        public TargetLocator switchTo() {
-            return null;
-        }
-
-        public Navigation navigate() {
-            return null;
-        }
-
-        public Options manage() {
-            return null;
-        }
-    };
-
-    public static WebElement emailForm = driver.findElement(By.id("email"));
-
-    public static WebElement passwordForm = driver.findElement(By.cssSelector("#passwd"));
-
-    public static WebElement signInButton = driver.findElement(By.cssSelector("#SubmitLogin"));
-
-    public static WebElement signInError = driver.findElement (By.cssSelector("#alert.alert-danger ol li"));
-
-
+    public static String invalidLoginError = "Authentication failed.";
 }
