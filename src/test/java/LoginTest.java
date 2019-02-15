@@ -9,7 +9,7 @@ public class LoginTest {
     public WebDriver driver;
 
     @BeforeClass
-    public void setUp() throws InterruptedException {
+    public void setUp() {
         Drivers driver1 = new Drivers();
         driver = driver1.DriversChrome();
         driver.get("http://automationpractice.com/index.php");
