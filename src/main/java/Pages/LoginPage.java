@@ -1,6 +1,9 @@
+package Pages;
+
+import TestHelpers.Matchers;
 import org.openqa.selenium.WebDriver;
 
-public class TestMethods {
+public class LoginPage {
     public static WebDriver driver;
 
     public static String getURL(){
@@ -20,9 +23,9 @@ public class TestMethods {
     }
 
     public static void login(String email, String password){
-        TestMethods.typeEmail(email);
-        TestMethods.typePassword(password);
-        TestMethods.clickSignIn();
+        LoginPage.typeEmail(email);
+        LoginPage.typePassword(password);
+        LoginPage.clickSignIn();
     }
 
     public static String loginError(){

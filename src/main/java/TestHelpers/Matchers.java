@@ -1,3 +1,5 @@
+package TestHelpers;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +8,7 @@ import java.util.Set;
 
 public class Matchers {
 
-    public static By emailForm = By.id("email");
+    public static By emailForm = By.cssSelector("#email");
 
     public static By passwordForm = By.cssSelector("#passwd");
 

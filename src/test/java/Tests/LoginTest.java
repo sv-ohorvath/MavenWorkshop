@@ -1,5 +1,9 @@
+package Tests;
+
+import Pages.LoginPage;
+import TestHelpers.Drivers;
+import TestHelpers.Matchers;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,15 +21,15 @@ public class LoginTest {
 
     @Test (priority = 1)
     public void validLogin() {
-        TestMethods.login("qaohff@gmail.com", "mozilla11");
-        Assert.assertEquals(TestMethods.getPageTitle(), "My account - My Store");
+        LoginPage.login("qaohff@gmail.com", "mozilla11");
+        Assert.assertEquals(LoginPage.getPageTitle(), "My account - My Store");
 
     }
 
     @Test (priority = 0)
     public void invalidLogin() {
-        TestMethods.login("qaohff@gmail.com", "wrongpassword");
-        Assert.assertEquals(TestMethods.loginError(), Matchers.invalidLoginError);
+        LoginPage.login("qaohff@gmail.com", "wrongpassword");
+        Assert.assertEquals(LoginPage.loginError(), Matchers.invalidLoginError);
     }
 
 
